@@ -4,6 +4,7 @@ import "./globals.css";
 import Topbar from "@/components/Topbar";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react"
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,11 @@ export default function RootLayout({
         <div className="flex-1">{children}</div>
         <Analytics />
         <Footer />
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="u16nzf8qVoWEtj2EMPb/vQ"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
