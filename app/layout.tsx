@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Topbar from "@/components/Topbar";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
       >
         <Topbar />
         <div className="flex-1">{children}</div>
+        <Analytics />
         <Footer />
       </body>
     </html>
